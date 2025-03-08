@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection Observer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 20px;
+        font-family: sans-serif;
+      }
+      #container {
+        margin: 0 auto;
+        width: 600px;
+        height: 300px;
+        background-color: rgb(14, 230, 111);
+        border-radius: 10px;
+        overflow-y: auto;
+        padding: 20px;
+      }
+
+      #box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        background: red;
+        border-radius: 10px;
+        margin: 20px 0 20px 0;
+        color: white;
+        font-weight: 600;
+      }
+
+      #root_element {
+        margin: 50px 0 5px 0;
+        text-align: center;
+        color: rgb(10, 156, 108);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: rgb(10, 156, 108)">Intersection Observer</h1>
+    <ul class="summary">
+      <li>lets you know if an element is visible to your end user</li>
+      <li>relative to whole document or scrollable element</li>
+    </ul>
+    <hr class="hr" />
+    <h1 id="root_element">Root Element</h1>
+    <div id="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <div id="box">element to be observed</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa,
+        veniam distinctio nihil fugiat ratione! Cupiditate dolores nulla a eaque
+        commodi, recusandae et perferendis assumenda, eligendi quisquam
+        nesciunt! Minima ut alias vero incidunt culpa ipsum quo dicta,
+        perspiciatis ipsam.
+      </p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

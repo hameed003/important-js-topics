@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getBoundingClientRect()</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        overflow-y: scroll;
+      }
+      #title {
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+        display: inline-block;
+        color: #009879;
+      }
+      p {
+        height: 300px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #009879;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="title">Element.getBoundingClientRect() - JS DOM</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sunt
+      maiores, neque facilis voluptates quidem dolorem animi ipsum accusantium,
+      provident earum recusandae exercitationem distinctio id reprehenderit a
+      iste molestiae labore!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sunt
+      maiores, neque facilis voluptates quidem dolorem animi ipsum accusantium,
+      provident earum recusandae exercitationem distinctio id reprehenderit a
+      iste molestiae labore!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sunt
+      maiores, neque facilis voluptates quidem dolorem animi ipsum accusantium,
+      provident earum recusandae exercitationem distinctio id reprehenderit a
+      iste molestiae labore!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sunt
+      maiores, neque facilis voluptates quidem dolorem animi ipsum accusantium,
+      provident earum recusandae exercitationem distinctio id reprehenderit a
+      iste molestiae labore!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sunt
+      maiores, neque facilis voluptates quidem dolorem animi ipsum accusantium,
+      provident earum recusandae exercitationem distinctio id reprehenderit a
+      iste molestiae labore!
+    </p>
+
+    <div class="box"></div>
+
+    <script type="text/javascript">
+      // getBoundingClientRect() is generally used on page scroll event.
+      const box = document.querySelector(".box");
+      window.addEventListener("scroll", () => {
+        console.log(window.innerHeight); // this is nothing but the height of the viewport.
+
+        const clientReact = box.getBoundingClientRect();
+        // console.log(clientReact);
+
+        console.log(box.getBoundingClientRect().top);
+        if (box.getBoundingClientRect().top < window.innerHeight)
+          box.style.background = "red";
+        else box.style.background = "green";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+Problem: Smooth Scrolling Not Working In Chrome:
+
+Solution:
+1: search 'chrome://flags/' in the chrome serarch bar.
+2: the chrome 'Experiment page' will open.
+3: search smooth.
+4: set the default to enabled.
+5: now the smooth scrolling will work as expected.

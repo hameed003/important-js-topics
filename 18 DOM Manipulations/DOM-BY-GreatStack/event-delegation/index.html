@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        /* display: flex;
+        align-items: center;
+        flex-direction: column; */
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        /* width: 100%; */
+        /* padding: 30px; */
+        /* text-align: center; */
+        color: white;
+      }
+      p {
+        font-size: 24px;
+      }
+
+      ul {
+        border: 2px solid gray;
+        padding: 10px;
+      }
+      ul li {
+        font-size: 20px;
+        cursor: pointer;
+        background: #ebebf6;
+        margin: 5px;
+        list-style: none;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Event Delegation</h1>
+    <hr />
+    <p>
+      1: <strong>Event Delegation</strong> is basically a pattern to handle
+      events efficiently. Instead of adding an event listener to each and every
+      similar element, we can add an event listener to a
+      <strong>parent element</strong> and call an event on a particular target
+      using the .target property of the event object.
+    </p>
+    <p>
+      2: It will also work if a new child is added to the parent element
+      dynamically.
+    </p>
+    <ul id="myList">
+      <li>Apple</li>
+      <li>Banner</li>
+      <li>Tomatto</li>
+    </ul>
+
+    <script>
+      // Implementing Event Delegation:
+      const myList = document.getElementById("myList");
+      myList.addEventListener("click", function (event) {
+        console.log(event);
+        const target = event.target;
+        if (target.matches("li")) {
+          // Remove color from all li elements
+          myList.querySelectorAll("li").forEach(function (li) {
+            li.style.color = "";
+          });
+
+          // Set color to red for the clicked li
+          target.style.color = "red";
+        }
+      });
+
+      // Creating new li element:
+      const newLi = document.createElement("li");
+      newLi.textContent = "newLi";
+      myList.appendChild(newLi);
+      // Event Delegation also work for the elemet added dynamically.
+    </script>
+  </body>
+</html>
